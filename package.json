@@ -1,5 +1,5 @@
 {
-  "name": "exercisebackstudents",
+  "name": "robots-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc --watch",
-    "start": "node dist/",
+    "start": "node dist",
     "start:dev": "node --watch dist",
     "prepare": "husky install"
   },
