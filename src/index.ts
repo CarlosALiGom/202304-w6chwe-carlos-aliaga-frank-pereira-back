@@ -4,7 +4,9 @@ import mongoose from "mongoose";
 import app from "./server/index.js";
 
 const debug = createDebug("robots-api:root");
+
 const mongoDbConnection = process.env.MONGODB_CONNECTION;
+const port = process.env.PORT ?? 4000;
 
 if (!mongoDbConnection) {
   debug("connection error");
@@ -17,8 +19,6 @@ try {
 } catch (error: unknown) {
   debug(`Error ${(error as Error).message}`);
 }
-
-const port = process.env.PORT ?? 4000;
 
 app.listen(port, () => {
   debug(`Listening on http://localhost:${port}`);
