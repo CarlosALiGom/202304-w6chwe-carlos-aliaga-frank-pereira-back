@@ -4,6 +4,7 @@ import express from "express";
 import robotsRouter from "../routers/robotsRouter.js";
 
 const app = express();
+app.disable("x-powered-by");
 
 app.use(morgan("dev"));
 
