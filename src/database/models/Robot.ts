@@ -1,11 +1,11 @@
 import { Schema, model } from "mongoose";
 
-const RobotSchema = new Schema({
+const robotSchema = new Schema({
   name: {
     type: String,
     required: true,
   },
-  url: {
+  imageUrl: {
     type: String,
     required: true,
   },
@@ -18,11 +18,11 @@ const RobotSchema = new Schema({
     required: true,
   },
   dateOfCreation: {
-    type: Number,
+    type: String,
     required: true,
   },
 });
 
-const Robot = model("robots", RobotSchema, "robots");
+const Robot = model("Robot", robotSchema, "robots");
 
 export default Robot;
